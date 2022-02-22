@@ -1,0 +1,265 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create Your Avatar
+{% endblock %}
+
+{% block main %}
+
+    <script>
+    var hair= ['LONG_HAIR_BIG_HAIR', 'LONG_HAIR_BOB',
+                 'LONG_HAIR_BUN', 'LONG_HAIR_CURLY', 'LONG_HAIR_CURVY',
+                 'LONG_HAIR_DREADS', 'LONG_HAIR_FRIDA', 'LONG_HAIR_FRO',
+                 'LONG_HAIR_FRO_BAND', 'LONG_HAIR_NOT_TOO_LONG',
+                 'LONG_HAIR_SHAVED_SIDES', 'LONG_HAIR_MIA_WALLACE',
+                 'LONG_HAIR_STRAIGHT', 'LONG_HAIR_STRAIGHT2',
+                 'LONG_HAIR_STRAIGHT_STRAND', 'SHORT_HAIR_DREADS_01',
+                 'SHORT_HAIR_DREADS_02', 'SHORT_HAIR_FRIZZLE',
+                 'SHORT_HAIR_SHAGGY_MULLET', 'SHORT_HAIR_SHORT_CURLY',
+                 'SHORT_HAIR_SHORT_FLAT', 'SHORT_HAIR_SHORT_ROUND',
+                 'SHORT_HAIR_SHORT_WAVED', 'SHORT_HAIR_SIDES',
+                 'SHORT_HAIR_THE_CAESAR', 'SHORT_HAIR_THE_CAESAR_SIDE_PART'];
+
+    var hat= ['HAT','HIJAB','TURBAN',
+                 'WINTER_HAT1','WINTER_HAT2','WINTER_HAT3',
+                 'WINTER_HAT4'];
+
+        function facial_hair_function(){
+
+            if (document.getElementById('facial_hair_type').value == 'DEFAULT'){
+                document.getElementById('facial_hair_color').style.display = "none";
+            }
+            else{
+                document.getElementById('facial_hair_color').style.display = "";
+            }
+        }
+
+        function clothe_function(){
+
+            if (document.getElementById('clothe_type').value == 'GRAPHIC_SHIRT'){
+                document.getElementById('clothe_graphic_type').style.display = "";
+            }
+            else{
+                document.getElementById('clothe_graphic_type').style.display = "none";
+            }
+        }
+
+        function head_function(){
+
+            if (hair.includes(document.getElementById('top_type').value)){
+                document.getElementById('hair_color').style.display = "";
+                document.getElementById('hat_color').style.display = "none";
+            }
+
+            else if (hat.includes(document.getElementById('top_type').value)){
+                document.getElementById('hair_color').style.display = "none";
+                document.getElementById('hat_color').style.display = "";
+            }
+            else{
+                document.getElementById('hair_color').style.display = "none";
+                document.getElementById('hat_color').style.display = "none";
+            }
+        }
+    </script>
+
+
+
+    <h1 style='padding: 20px'>Create Your Own Avatar!</h1>
+    <div id='final_avatar'>
+        <div class='avatar_name'>{{ avatar_name }}</div>
+        <div class='container'>
+            <img class='avatar_png' src='/static/{{image}}' alt="rendered avatar" height='280' width='280'>
+            <div class='overlay'>{{ catchphrase }}</div>
+        </div>
+        <br>
+    </div>
+    <br>
+    <form id='creation_form' action="/" method='post'>
+        Skin Color:
+        <select name="skin_color">
+            {% for option in list_skin_color %}
+                {% if option == skin_color %}
+                    <option selected>{{option}}</option>
+                {% else %}
+                    <option>{{option}}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <div>
+            <br>
+            Top Type:
+            <select onchange='head_function()' id='top_type' name="top_type">
+                {% for option in list_top_type %}
+                    {% if option == top_type %}
+                        <option selected>{{option}}</option>
+                    {% else %}
+                        <option>{{option}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div id='hat_color'>
+            <br>
+            Hat Color:
+            <select name="hat_color">
+                {% for option in list_hat_color %}
+                    {% if option == hat_color %}
+                        <option selected>{{option}}</option>
+                    {% else %}
+                        <option>{{option}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div id='hair_color'>
+            <br>
+            Hair Color:
+            <select name="hair_color">
+                {% for option in list_hair_color %}
+                    {% if option == hair_color %}
+                        <option selected>{{option}}</option>
+                    {% else %}
+                        <option>{{option}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+            <br>
+            <div>
+                Facial Hair Type:
+                <select onchange='facial_hair_function()' name="facial_hair_type" id='facial_hair_type'>
+                    {% for option in list_facial_hair_type %}
+                        {% if option == facial_hair_type %}
+                            <option selected>{{option}}</option>
+                        {% else %}
+                            <option>{{option}}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+        <div id='facial_hair_color'>
+            <br>
+            Facial Hair Color:
+            <select name="facial_hair_color">
+                {% for option in list_facial_hair_color %}
+                    {% if option == facial_hair_color %}
+                        <option selected>{{option}}</option>
+                    {% else %}
+                        <option>{{option}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div id='mouth_type'>
+            <br>
+            Mouth Type:
+            <select name="mouth_type">
+                {% for option in list_mouth_type %}
+                    {% if option == mouth_type %}
+                        <option selected>{{option}}</option>
+                    {% else %}
+                        <option>{{option}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div id='eye_type'>
+            <br>
+            Eye Type:
+            <select name="eye_type">
+                {% for option in list_eye_type %}
+                    {% if option == eye_type %}
+                        <option selected>{{option}}</option>
+                    {% else %}
+                        <option>{{option}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div id='eyebrow_type'>
+            <br>
+            Eyebrow Type:
+            <select name="eyebrow_type">
+                {% for option in list_eyebrow_type %}
+                    {% if option == eyebrow_type %}
+                        <option selected>{{option}}</option>
+                    {% else %}
+                        <option>{{option}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div id='accessories_type'>
+            <br>
+            Accessories:
+            <select name="accessories_type">
+                {% for option in list_accessories_type %}
+                    {% if option == accessories_type %}
+                        <option selected>{{option}}</option>
+                    {% else %}
+                        <option>{{option}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <br>
+            Clothes:
+            <select onchange='clothe_function()' name="clothe_type" id='clothe_type'>
+                {% for option in list_clothe_type %}
+                    {% if option == clothe_type %}
+                        <option selected>{{option}}</option>
+                    {% else %}
+                        <option>{{option}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div id='clothe_color'>
+            <br>
+            Clothes Color:
+            <select name="clothe_color">
+                {% for option in list_clothe_color %}
+                    {% if option == clothe_color %}
+                        <option selected>{{option}}</option>
+                    {% else %}
+                        <option>{{option}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div id='clothe_graphic_type'>
+            <br>
+            Clothes Graphic Design:
+            <select name="clothe_graphic_type">
+                {% for option in list_clothe_graphic_type %}
+                    {% if option == clothe_graphic_type %}
+                        <option selected>{{option}}</option>
+                    {% else %}
+                        <option>{{option}}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <br>
+        Avatar Name: <input type="text" name='avatar_name' autocomplete='off' value='{{ avatar_name }}'>
+        <br>
+        <br>
+        Catchphrase (hover over/tap on the avatar): <input type="text" name='catchphrase' autocomplete='off' value='{{ catchphrase }}'>
+        <br>
+        <br>
+        <button class="btn btn-primary" type='submit'>Confirm</button>
+        <br>
+    </form>
+    <br>
+    <script>
+        window.addEventListener("load", head_function(), true);
+        window.addEventListener("load", clothe_function(), true);
+        window.addEventListener("load", facial_hair_function(), true);
+    </script>
+    <form id='to_gallery' action="/gallery" method='get'>
+        <button class="btn btn-primary" id='gallery_button' type='submit'>Go to the gallery of avatars!</button>
+    </form>
+
+    <div style='display: none' id='new_qn'>new question has appeared</div>
+{% endblock %}

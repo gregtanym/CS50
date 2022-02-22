@@ -1,0 +1,11 @@
+cs50
+Flask
+Flask-Sessions
+requests
+os
+werkzeug
+tempfile
+urllib
+py_avataars
+output.png
+avatar.svg

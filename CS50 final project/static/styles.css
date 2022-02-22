@@ -1,0 +1,104 @@
+/* login/register page css */
+
+body {
+    background-image: url('light-yellow-brick-wall-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Georgia';
+}
+
+.nav {
+    float: right;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.nav-login {
+    display: block;
+}
+
+.nav-item {
+    list-style-type: none;
+}
+
+.form-group {
+    width: 500px;
+    margin: 20px;
+}
+
+#login_button {
+    margin-left: 20px;
+}
+
+#register_button {
+    margin-left: 20px;
+}
+
+/* index page css */
+
+#final_avatar {
+    text-align: center;
+    padding: 0px;
+}
+
+
+.avatar_name {
+    font-size: 25px;
+}
+
+.avatar_png {
+    padding: 0px;
+}
+
+#creation_form {
+    text-align: center;
+}
+
+#login_title {
+
+}
+
+#to_gallery {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#gallery_button {
+    background-color: #4CAF50;
+}
+
+/* gallery page css */
+
+.container {
+    display: inline-block;
+    width: 280px;
+    text-align: center;
+    padding: 0px;
+}
+
+.overlay {
+  position: relative;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 280px;
+  height: auto;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 0px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.avatar_gallery {
+    text-align: center;
+    padding: 0px;
+    display: inline-block;
+}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+    <h1 style='padding: 20px'>Gallery Of Avatars</h1>
+    {% for i in range(n) %}
+        <div class='avatar_gallery'>
+            <div class='avatar_name'>{{ avatar_data[i]['avatar_name'] }}</div>
+                <div class='container'>
+                    <img class='avatar_png' src='/static/output_{{ i+1 }}_2.png' alt="rendered avatar" height='280' width='280'>
+                <div class='overlay'>{{ avatar_data[i]['catchphrase'] }}</div>
+            </div>
+            <br>
+        </div>
+    {% endfor %}
+{% endblock %}
