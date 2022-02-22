@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <meta name='veiwport' content='width=device-width, initial-scale=1'>
+        <title>Greg's Webpage</title>
+
+        <style>
+            .main_content{
+                font-family: Candara;
+            }
+        </style>
+
+        <script>
+            function submit_function(){
+                var answer1 = document.querySelector('input[name="qn1"]:checked').value;
+                var answer2 = document.querySelector('input[name="qn2"]:checked').value;
+                var answer3 = document.getElementById('cca').value;
+                var answer4 = document.getElementById('siblings').value;
+
+                if(answer1=='JC'){
+                    if(answer2=='yes'){
+                        if(answer3.toLowerCase()=='tennis'){
+                            alert('shamine');
+                        }
+                        else if(answer3.toLowerCase()=='frisbee'){
+                            if(answer4=='1'){
+                                alert('vanessa');
+                            }
+                            else{
+                                alert('hannah');
+                            }
+                        }
+                        else if(answer3.toLowerCase()=='rugby'){
+                            if(answer4=='2'){
+                                alert('ham');
+                            }
+                            else{
+                                alert('bala');
+                            }
+                        }
+                        else if(answer3.toLowerCase()=='dance'){
+                            alert('joy');
+                        }
+                        else if(answer3.toLowerCase()=='football'){
+                            alert('cheryl');
+                        }
+                    }
+                    else{
+                        if(answer3.toLowerCase()=='hockey'){
+                            alert('sean');
+                        }
+                        else if(answer3.toLowerCase()=='badminton'){
+                            alert('darryl');
+                        }
+                        else if(answer3.toLowerCase()=='rugby'){
+                            alert('sorry shawn/ryan. cant seem to differentiate yall.');
+                        }
+                    }
+                }
+
+
+
+                else if(answer1=='Secondary School'){
+                    if(answer2=='yes'){
+                        if(answer3.toLowerCase()=='basketball'){
+                            if(answer4=='0'){
+                                alert('li yang');
+                            }
+                            else{
+                                alert('jon');
+                            }
+                        }
+                        else if(answer3.toLowerCase()=='ncc'){
+                            alert('josh');
+                        }
+                        else if(answer3.toLowerCase()=='softball'){
+                            if(answer4=='2'){
+                                alert('yong hwee');
+                            }
+                            else{
+                                alert('gab');
+                            }
+                        }
+                        else if(answer3.toLowerCase()=='dance'){
+                            alert('janelley');
+                        }
+                        else if(answer3.toLowerCase()=='netball'){
+                            alert('steph');
+                        }
+                    }
+
+                    else{
+                        if(answer3.toLowerCase()=='ncc'){
+                            if(answer4=='0'){
+                                alert('robbie');
+                            }
+                            else{
+                                alert('yu yang');
+                            }
+                        }
+                        else if(answer3.toLowerCase()=='canoeing'){
+                            alert('nat');
+                        }
+                        else if(answer3.toLowerCase()=='shooting'){
+                            alert('hwee xin');
+                        }
+                        else if(answer3.toLowerCase()=='infocomm'){
+                            alert('matt');
+                        }
+                        else if(answer3.toLowerCase()=='softball'){
+                            alert('jordan');
+                        }
+                        else if(answer3.toLowerCase()=='dance'){
+                            if(answer4=='1'){
+                                alert('jane');
+                            }
+                            else{
+                                alert('shahira');
+                            }
+                        }
+                        else if(answer3.toLowerCase()=='netball'){
+                            alert('fel');
+                        }
+                        else if(answer3.toLowerCase()=='choir'){
+                            alert('ashlyn');
+                        }
+                    }
+                }
+
+                else if(answer1=='Church'){
+                    if(answer3=='floorball'){
+                        alert('claudia');
+                    }
+                    else if(answer3=='choir'){
+                        alert('sandra');
+                    }
+                    else if(answer3=='band'){
+                        alert('theo');
+                    }
+                    else{
+                        alert('raf');
+                    }
+                }
+
+                else if(answer1=='Family'){
+                    if(answer3=='scouts'){
+                        alert('kor kor glenn');
+                    }
+                    else if(answer3=='touch rugby'){
+                        alert('che che gail');
+                    }
+                    else if(answer3=='canoeing'){
+                        alert('di di gavin');
+                    }
+                    else if(answer3=='coding god' || answer3=='che'){
+                        alert('big greg');
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class='wrapper'>
+            <div class='sidebar'>
+                <h2>contents</h2>
+                <ul>
+                    <li><a href='https://ide-8c7132d18b1645cfbb7deb712b8bf5b8-8080.cs50.ws/index.html'>Home</a></li>
+                    <li><a href='https://ide-8c7132d18b1645cfbb7deb712b8bf5b8-8080.cs50.ws/page1.html'>About Me</a></li>
+                    <li><a href='https://ide-8c7132d18b1645cfbb7deb712b8bf5b8-8080.cs50.ws/page2.html'>Trivia!</a></li>
+                    <li><a href='https://ide-8c7132d18b1645cfbb7deb712b8bf5b8-8080.cs50.ws/page3.html'>Contact Me</a></li>
+                </ul>
+            </div>
+            <div class='main_content'>
+                <div class='header' style='font-family:Candara;'>Trivia!</div>
+                <div class='rules'>
+                    <h3>Rules:</h3>
+                    <p>This game is for me to guess who you are!</p>
+                    <p>All you have to do is to answer the following questions honestly and hopefully my code will narrow down your name!</p>
+                    <p>Once you have answered all the questions correctly, click the submit button at the bottom!</p>
+                    <p>Disclaimer: This function may not work if I dont know enough about you :( if you tried submitting and no alerts popped out means I have not configured you. sorry!</p>
+                </div>
+                <br>
+                <h3 style='padding: 20px;'>Begin!</h3>
+                <div class='trivia_qns'>
+                    <form onsubmit='submit_function(); return false;'>
+
+                        Where did I FIRST meet you?
+                        <br>
+                        <input id='school.1' name='qn1' type='radio' value='JC'>JC
+                        <br>
+                        <input id='school.2' name='qn1' type='radio' value='Secondary School'>Secondary School
+                        <br>
+                        <input id='school.3' name='qn1' type='radio' value='Church'>Church
+                        <br>
+                        <input id='school.4' name='qn1' type='radio' Value='Family'>Family
+
+                        <br>
+                        <br>
+                        Were you in my class?
+                        <br>
+                        <input id='class.1' name='qn2' type='radio' value='yes'>Yes
+                        <input id='class.2' name='qn2' type='radio' value='no'>No
+
+                        <br>
+                        <br>
+                        What was your CCA when I knew you?
+                        <input id='cca' name='qn3' type='text' autocomplete='off'>
+
+                        <br>
+                        <br>
+                        How many siblings do you have?
+                        <input id='siblings' name=qn4 type='text' autocomplete='off'>
+
+                        <br>
+                        <input id='submit_form' type='submit'>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
+<!-- Contain at least four different .html pages, at least one of which is index.html (the main page of your website), and it should be possible to get from any page on your website to any other page by following one or more hyperlinks.
+Use at least ten (10) distinct HTML tags besides <html>, <head>, <body>, and <title>. Using some tag (e.g., <p>) multiple times still counts as just one (1) of those ten!
+Integrate one or more features from Bootstrap into your site. -->

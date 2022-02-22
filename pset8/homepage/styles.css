@@ -1,0 +1,187 @@
+/*uses at least five (5) different CSS selectors (e.g. tag (example), class (.example), or ID (#example)), and within which you use a total of at least five (5) different CSS properties, such as font-size, or margin; and
+Integrate one or more features of JavaScript into your site to make your site more interactive. For example, you can use JavaScript to add alerts, to have an effect at a recurring interval, or to add interactivity to buttons, dropdowns, or forms. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+
+}
+
+body{
+    background-image: url('https://www.itl.cat/pngfile/big/157-1572191_hd-wallpapers-for-website-background-cool-background-image.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Open Sans';
+    color: white;
+}
+
+.wrapper{
+    display: flex;
+    position: relative;
+}
+
+.sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #e6f7ff;
+    padding: 30px 0;
+}
+
+h2{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.sidebar li{
+    padding: 15px;
+    border-bottom: 1px solid #000000;
+    display: block;
+    color: #000000;
+}
+
+.sidebar li:hover{
+    background: #ffffff;
+}
+
+.main_content{
+    margin-left: 200px;
+    width: 100%;
+}
+
+.header{
+    padding: 20px;
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    border-bottom: 1px solid #000000;
+    text-align: center;
+    color: #cce6ff;
+}
+
+.info{
+    margin: 20px;
+    line-height: 15px;
+}
+
+.quotes div{
+    font-size: 20px;
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+}
+
+.quotes{
+    text-align: center;
+}
+
+.greetings{
+    border-radius: 10px;
+    background: #b3d9ff;
+    color: black;
+    display: inline-block;
+    padding: 10px;
+}
+
+#myphoto{
+    float:right;
+    height: 400px;
+    width: 300px;
+    margin: 10px;
+    margin-right: 50px;
+
+}
+
+.intro{
+    padding: 10px;
+}
+
+#surprise_card{
+    display: inline-block;
+    color: black;
+    background: #e6f2ff;
+}
+
+
+#ig{
+    display: inline-block;
+    height:50px;
+    width:50px;
+    margin: 20px;
+}
+
+#tiktok{
+    display: inline-block;
+    height:50px;
+    width:50px;
+    margin: 20px;
+}
+
+#youtube{
+    display: inline-block;
+    height: 50px;
+    width: 75px;
+    margin: 20px;
+    margin-left:10px;
+}
+
+
+.goodbye p{
+    font-size: 20px;
+    line-height: 100%;
+    color: white;
+}
+
+.goodbye{
+    border-radius: 10px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 50px;
+    border: 1px solid red;
+}
+
+.feedback{
+    float:right;
+    opacity:0.5;
+}
+
+.background{
+    line-height: 100%;
+}
+
+.hobbies a:link{
+    text-decoration: underline;
+}
+
+.rules{
+    padding: 20px;
+    background:#e6f2ff;
+    color:black;
+}
+
+.trivia_qns{
+    padding:20px;
+}
+
+.social_media{
+    text-align: center;
+}
+
+.something{
+    margin:50px;
+    font-size:20px;
+    text-align: center;
+}
+
+#comment{
+    height:100px;
+    width:300px;
+    padding:5px;
+    margin-left:5px;
+    font-size:14px;
+}
+
